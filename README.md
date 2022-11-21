@@ -2,7 +2,7 @@
 
 ## Overview of Analysis
 
-The purpose of this analysis was to determine, using PostgreSQL, the employees who are eligible for retirement through their title as well as which employees are eligible for the mentorship program. The SQL querey code written to find these results is in the [Employee_Database_challenge]() file in the [Queries]() folder. Results and examples of these queries will be detailed below.
+The purpose of this analysis was to determine, using PostgreSQL, the employees who are eligible for retirement through their title as well as which employees are eligible for the mentorship program. The SQL querey code written to find these results is in the [Employee_Database_challenge](https://github.com/stwpf01/Pewlett_Hackard_Analysis/blob/main/Queries/Employee_Database_challenge.sql) file in the [Queries](https://github.com/stwpf01/Pewlett_Hackard_Analysis/tree/main/Queries) folder. Results and examples of these queries will be detailed below.
 
 ## Results
 Results: Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed
@@ -27,7 +27,7 @@ SELECT COUNT(title), title INTO retiring_titles
 FROM unique_titles
 GROUP BY title ORDER BY COUNT(title) DESC;
 ```
-![Retiring_Titles]()
+![Retiring_Titles](https://github.com/stwpf01/Pewlett_Hackard_Analysis/blob/main/Queries/retiring_titles.png)
 
 - Since all of these roles cannot be left empty, it was determined who would eligible for mentorship by finding those employees who were born in 1965. 
 
@@ -47,11 +47,11 @@ ORDER BY emp_no;
 
 Assuming all roles will need to be filled there will be over 70,000 openings left from those retiring. Comparing that count to the count of mentorship ready employees (Shown with query):
 
-![Mentorship_Count]()
+![Mentorship_Count](https://github.com/stwpf01/Pewlett_Hackard_Analysis/blob/main/Queries/mentorship_count.png)
 
 There are plenty of retirement ready employees to mentor. If anything, there needs to be more mentorees to help fill the roles that will be left after the retirees leave. Expanding it beyond employees born in 1965 would be beneficial. Another aspect that is somewhat worrying is  that there are two managers ready to retire with no one seemingly to replace them (Shown with query):
 
-![Retiring_Managers]()
+![Retiring_Managers](https://github.com/stwpf01/Pewlett_Hackard_Analysis/blob/main/Queries/retiring_managers.png)
 
 Two employees who are mentorship ready should be mentored to take over for these two managers once they decide to retire.
 
